@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css"
+      rel="stylesheet"
+    />
+
+    <link rel="stylesheet" href="style.css" />
+    <link rel="shortcut icon" href="favicon.ico" type="image/x-icon" />
+    <title>Currency Converter</title>
+  </head>
+  <body>
+    <div class="converter-info">
+      <h2 class="purples">Currency Converter</h2>
+      <button class="btn">Convert Your Currency</button>
+    </div>
+    <div class="container hide">
+      <div class="currency-container">
+        <div class="heading">
+          <p>Currency Converter</p>
+        </div>
+        <form>
+          <div class="amount">
+            <label for="amount">Enter Amount :</label>
+            <input type="number" />
+          </div>
+          <div class="country-select">
+            <div class="from">
+              <p>From</p>
+              <div class="select-container">
+                <img src="https://flagsapi.com/US/flat/64.png" />
+                <select name="from" id="from"></select>
+              </div>
+            </div>
+            <i class="bx bx-rotate-right"></i>
+            <div class="to">
+              <p>To</p>
+              <div class="select-container">
+                <img src="https://flagsapi.com/IN/flat/64.png" />
+                <select name="to" id="to"></select>
+              </div>
+            </div>
+          </div>
+          <div class="result">
+            <p></p>
+          </div>
+          <button class="btn">GET EXCHANGE RATE</button>
+        </form>
+      </div>
+      <i class="bx bx-x-circle hideBtn"></i>
+    </div>
+    <script src="https://unpkg.com/boxicons@2.1.4/dist/boxicons.js"></script>
+    <script src="codes.js"></script>
+    <script src="script.js"></script>
+  </body>
+</html>

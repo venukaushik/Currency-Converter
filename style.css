@@ -1,0 +1,206 @@
+@import url("https://fonts.googleapis.com/css2?family=Lemon&display=swap");
+@font-face {
+  font-family: "Rocher";
+  src: url(https://assets.codepen.io/9632/RocherColorGX.woff2);
+}
+@font-palette-values --Purples {
+  font-family: Rocher;
+  base-palette: 6;
+}
+.purples {
+  font-palette: --Purples;
+}
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.converter-info {
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+}
+
+.converter-info h2 {
+  font-family: "Rocher";
+  text-align: center;
+  font-size: 50px;
+  font-weight: bold;
+  margin-bottom: 20px;
+}
+
+.converter-info .btn {
+  width: 20%;
+  margin: 0;
+}
+
+.show {
+  display: block;
+}
+
+.container {
+  height: 100vh;
+  justify-content: center;
+  align-items: center;
+  background-color: rgb(255, 221, 179);
+  display: flex;
+  flex-direction: column;
+}
+
+.hide {
+  display: none;
+}
+
+.currency-container {
+  width: 25vw;
+  padding: 2rem;
+  background-color: #ffffff;
+  border: none;
+  border-radius: 20px;
+  box-shadow: 2px 2px 10px rgb(83, 83, 83);
+}
+
+form {
+  margin-block: 2rem 1rem;
+  display: flex;
+  flex-direction: column;
+  gap: 25px;
+}
+
+form input,
+select {
+  border: none;
+  outline: none;
+  width: 100%;
+}
+
+.heading {
+  font-family: "Lemon", serif;
+  text-align: center;
+  font-size: 24px;
+  font-weight: bold;
+  color: white;
+  -webkit-text-stroke: 2px rgb(30, 30, 30);
+}
+
+.amount {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+}
+
+.amount input {
+  padding: 8px 0 8px 10px;
+  outline: none;
+  border: 1px solid gray;
+  border-radius: 7px;
+}
+
+.country-select {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.country-select select {
+  cursor: pointer;
+  padding: 0 5px;
+  font-size: 1rem;
+}
+
+.country-select i {
+  margin-top: 1rem;
+  font-size: 30px;
+}
+
+.select-container {
+  display: flex;
+  padding: 0 5px;
+  border: 1px solid gray;
+  border-radius: 7px;
+}
+
+.country-select img {
+  width: 40px;
+  height: auto;
+}
+
+.result {
+  padding-top: 10px;
+  font-size: 20px;
+  text-align: center;
+  display: none;
+}
+
+form .btn {
+  width: 95%;
+  margin: auto;
+}
+
+.btn {
+  cursor: pointer;
+  padding: 10px 10px;
+  position: relative;
+  background: white;
+  font-size: 20px;
+  border-top-right-radius: 10px;
+  border-bottom-left-radius: 10px;
+  transition: all 0.5s;
+}
+
+.btn:after,
+.btn:before {
+  content: " ";
+  width: 20px;
+  height: 20px;
+  position: absolute;
+  border: 0px solid #fff;
+  transition: all 1s;
+}
+
+.btn:after {
+  top: -1px;
+  left: -1px;
+  border-top: 4px solid black;
+  border-left: 4px solid black;
+}
+
+.btn:before {
+  bottom: -1px;
+  right: -1px;
+  border-bottom: 4px solid black;
+  border-right: 4px solid black;
+}
+
+.btn:hover {
+  border-top-right-radius: 0px;
+  border-bottom-left-radius: 0px;
+}
+
+.btn:hover:before,
+.btn:hover:after {
+  display: inline;
+  width: 102%;
+  height: 102%;
+}
+
+.rotate {
+  animation: rotate 0.5s ease-in 1;
+}
+
+@keyframes rotate {
+  to {
+    transform: rotate(180deg);
+  }
+}
+
+.hideBtn {
+  cursor: pointer;
+  font-size: 30px;
+  margin-top: 10px;
+  padding: 5px 5px;
+}
